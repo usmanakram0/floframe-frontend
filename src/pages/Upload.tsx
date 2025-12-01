@@ -167,7 +167,8 @@ const Upload = () => {
       formData.append("video", videoFile);
 
       const response = await fetch(
-        "http://localhost:4000/api/extract-last-frame",
+        "http://floframe-be.vercel.app/api/extract-last-frame",
+
         {
           method: "POST",
           body: formData,
@@ -275,9 +276,9 @@ const Upload = () => {
             {/* Logo Header */}
             <div className="flex items-center justify-center gap-4 mb-8">
               <div className="w-12 sm:w-16 h-12 sm:h-16 bg-primary rounded-xl flex items-center justify-center">
-                <span className="text-3xl sm:text-4xl font-bold text-primary-foreground">
-                  F
-                </span>
+                <div className="w-16 h-16 flex items-center justify-center transition-transform group-hover:scale-105">
+                  <img src="/assets/logoo.png" alt="" />
+                </div>
               </div>
               <h1 className="text-2xl sm:text-4xl font-bold text-foreground">
                 FloFrame

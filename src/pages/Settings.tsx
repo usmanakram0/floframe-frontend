@@ -38,8 +38,8 @@ const Settings = () => {
         <main className="container mx-auto px-4 py-12 max-w-2xl">
           <div className="space-y-8">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-2xl">F</span>
+              <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105">
+                <img src="/assets/logoo.png" alt="" />
               </div>
               <h1 className="text-3xl font-bold text-foreground">Settings</h1>
             </div>
