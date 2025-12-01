@@ -5,6 +5,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Navigation } from "@/components/Navigation";
 import { useUpload } from "@/contexts/UploadContext";
 import { useSettings } from "@/contexts/SettingsContext";
+import logo from "../assets/logo.png";
 
 const Upload = () => {
   const {
@@ -167,7 +168,7 @@ const Upload = () => {
       formData.append("video", videoFile);
 
       const response = await fetch(
-        "http://floframe-be.vercel.app/api/extract-last-frame",
+        "https://floframe-be.vercel.app/api/extract-last-frame",
 
         {
           method: "POST",
@@ -277,7 +278,7 @@ const Upload = () => {
             <div className="flex items-center justify-center gap-4 mb-8">
               <div className="w-12 sm:w-16 h-12 sm:h-16 bg-primary rounded-xl flex items-center justify-center">
                 <div className="w-16 h-16 flex items-center justify-center transition-transform group-hover:scale-105">
-                  <img src="/assets/logoo.png" alt="" />
+                  <img src={logo} alt="" />
                 </div>
               </div>
               <h1 className="text-2xl sm:text-4xl font-bold text-foreground">

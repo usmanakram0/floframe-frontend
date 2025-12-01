@@ -11,6 +11,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { useSettings } from "@/contexts/SettingsContext";
 import { ChevronRight } from "lucide-react";
+import logo from "../assets/logo.png";
 
 const Settings = () => {
   const {
@@ -39,7 +40,7 @@ const Settings = () => {
           <div className="space-y-8">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105">
-                <img src="/assets/logoo.png" alt="" />
+                <img src={logo} alt="" />
               </div>
               <h1 className="text-3xl font-bold text-foreground">Settings</h1>
             </div>

@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 export const Navigation = () => {
   const location = useLocation();
@@ -9,7 +10,7 @@ export const Navigation = () => {
     <nav className="w-full px-6 py-4 flex items-center justify-between border-b border-border">
       <Link to="/" className="flex items-center gap-2 group">
         <div className="w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-105">
-          <img src="/assets/logoo.png" alt="" />
+          <img src={logo} alt="" />
         </div>
         <span className="text-xl font-bold text-foreground">FloFrame</span>
       </Link>
