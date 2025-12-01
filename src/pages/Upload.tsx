@@ -111,53 +111,6 @@ const Upload = () => {
     const file = e.target.files?.[0];
     if (file) handleFileSelect(file);
   };
-  // locally extraction frame
-  // const extractFrame = async () => {
-  //   if (!videoFile) return;
-  //   setIsProcessing(true);
-
-  //   try {
-  //     const video = document.createElement("video");
-  //     video.preload = "metadata";
-
-  //     await new Promise((resolve) => {
-  //       video.onloadedmetadata = resolve;
-  //       video.src = URL.createObjectURL(videoFile);
-  //     });
-
-  //     video.currentTime = video.duration - 0.1;
-  //     await new Promise((resolve) => {
-  //       video.onseeked = resolve;
-  //     });
-
-  //     const canvas = document.createElement("canvas");
-  //     canvas.width = video.videoWidth;
-  //     canvas.height = video.videoHeight;
-
-  //     const ctx = canvas.getContext("2d");
-  //     ctx?.drawImage(video, 0, 0);
-
-  //     const frameData = canvas.toDataURL("image/png", 1.0);
-
-  //     setExtractedFrame(frameData);
-
-  //     URL.revokeObjectURL(video.src);
-
-  //     toast({
-  //       title: "Frame extracted",
-  //       description: "Last frame extracted successfully",
-  //     });
-  //   } catch (error) {
-  //     console.error(error);
-  //     toast({
-  //       title: "Extraction failed",
-  //       description: "Failed to extract frame from video",
-  //       variant: "destructive",
-  //     });
-  //   } finally {
-  //     setIsProcessing(false);
-  //   }
-  // };
 
   const extractFrame = async () => {
     if (!videoFile) return;
@@ -168,7 +121,8 @@ const Upload = () => {
       formData.append("video", videoFile);
 
       const response = await fetch(
-        "https://floframe-be.vercel.app/api/extract-last-frame",
+        // "https://floframe-be.vercel.app/api/extract-last-frame",
+        "http://13.222.13.17:4000/api/extract-last-frame",
 
         {
           method: "POST",
