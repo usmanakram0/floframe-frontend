@@ -122,7 +122,7 @@ const Upload = () => {
 
       const response = await fetch(
         // "https://floframe-be.vercel.app/api/extract-last-frame",
-        "http://13.222.13.17:4000/api/extract-last-frame",
+        "https://13.222.13.17/api/extract-last-frame",
 
         {
           method: "POST",
